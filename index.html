@@ -483,7 +483,7 @@
     border: 1.5px dashed rgba(255,216,156,0.35);
     border-radius: 12px;
     padding: 0.9rem 1.1rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -492,9 +492,26 @@
     font-family: 'Space Mono', monospace;
     color: var(--amber-soft);
     font-size: 1.15rem;
+    line-height: 1;
+    text-align: left;
+    vertical-align: baseline;
     transition: border-color 0.2s, background 0.2s;
     width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline-offset: 3px;
   }
+  .ip-copy span{
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+  .ip-copy #ipText{ flex: 1; justify-content: flex-start; }
+  .ip-copy .copy-hint{ justify-content: flex-end; flex-shrink: 0; }
   .ip-copy:hover{ border-color: var(--amber-soft); background: rgba(255,158,94,0.08); }
   .copy-hint{
     font-size: 0.68rem;
